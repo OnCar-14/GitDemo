@@ -1,0 +1,21 @@
+###asfjcbadi
+asknodnof
+
+Set WshShell = WScript.CreateObject("WScript.Shell")
+
+' Start Notepad.exe
+WshShell.Run "%windir%\notepad.exe"
+
+' Select, or bring Focus to a window named `Notepad`
+WshShell.AppActivate "Notepad"
+
+' Wait for 4 seconds
+WScript.Sleep 4000
+
+WshShell.SendKeys "Foo"
+WshShell.SendKeys "{ENTER}"
+WshShell.SendKeys "Bar"
+WshShell.SendKeys "{ENTER}"
+WshShell.SendKeys "{CAPSLOCK}"
+WshShell.SendKeys "baz"
+WshShell.SendKeys "%{F4}"
